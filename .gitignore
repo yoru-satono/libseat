@@ -78,10 +78,7 @@ test/helpers/__pycache__/
 test/tests/__pycache__/
 
 # -------- Claude Code --------
-.claude/plans/
-.claude/worktrees/
-.claude/scheduled_tasks.json
-.claude/history.jsonl
+.claude/
 
 # -------- Logs --------
 logs/
