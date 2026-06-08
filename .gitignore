@@ -1,0 +1,92 @@
+# ================================================================
+# LibSeat .gitignore
+# ================================================================
+
+# -------- OS --------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# -------- IDE / Editor --------
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.settings/
+.project
+.classpath
+.factorypath
+.apt_generated
+.sts4-cache
+.springBeans
+.nbproject/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# -------- Environment & Secrets --------
+.env
+.env.*
+!.env.example
+
+# -------- Server (Spring Boot / Maven) --------
+server/target/
+server/build/
+server/.mvn/wrapper/maven-wrapper.jar
+server/HELP.md
+
+# -------- Server (xmake build artifacts) --------
+server/.xmake/
+server/build/
+
+# -------- Web (Node / Vue / Vite) --------
+web/node_modules/
+web/dist/
+web/dist-ssr/
+web/*.local
+web/*.tsbuildinfo
+web/.eslintcache
+web/*.timestamp-*-*.mjs
+
+# -------- Web Tests --------
+web/coverage/
+web/__screenshots__/
+web/test-results/
+web/playwright-report/
+web/playwright/.cache/
+
+# -------- Python --------
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+wheels/
+
+# -------- Python Virtual Env --------
+.venv/
+venv/
+env/
+
+# -------- Python Tests --------
+.pytest_cache/
+test/__pycache__/
+test/helpers/__pycache__/
+test/tests/__pycache__/
+
+# -------- Claude Code --------
+.claude/plans/
+.claude/worktrees/
+.claude/scheduled_tasks.json
+.claude/history.jsonl
+
+# -------- Logs --------
+logs/
+*.log
+
+# -------- Misc --------
+*.bak
+*.tmp

@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+@theme {
+  /* ===== 主色调：深邃海军蓝 ===== */
+  --color-primary-50: oklch(96% 0.015 265);
+  --color-primary-100: oklch(92% 0.03 265);
+  --color-primary-200: oklch(85% 0.06 265);
+  --color-primary-300: oklch(75% 0.10 265);
+  --color-primary-400: oklch(63% 0.15 265);
+  --color-primary-500: oklch(52% 0.19 265);
+  --color-primary-600: oklch(44% 0.18 265);
+  --color-primary-700: oklch(36% 0.16 265);
+  --color-primary-800: oklch(28% 0.13 265);
+  --color-primary-900: oklch(21% 0.09 265);
+
+  /* ===== 强调色：暖陶土色 ===== */
+  --color-accent-50: oklch(96% 0.025 30);
+  --color-accent-100: oklch(91% 0.05 30);
+  --color-accent-200: oklch(84% 0.08 30);
+  --color-accent-300: oklch(74% 0.12 30);
+  --color-accent-400: oklch(66% 0.16 30);
+  --color-accent-500: oklch(58% 0.19 30);
+  --color-accent-600: oklch(51% 0.18 30);
+  --color-accent-700: oklch(44% 0.16 30);
+  --color-accent-800: oklch(36% 0.13 30);
+  --color-accent-900: oklch(28% 0.10 30);
+
+  /* ===== 成功色：鼠尾草绿 ===== */
+  --color-success-50: oklch(96% 0.03 155);
+  --color-success-100: oklch(91% 0.06 155);
+  --color-success-200: oklch(83% 0.10 155);
+  --color-success-300: oklch(73% 0.14 155);
+  --color-success-400: oklch(63% 0.17 155);
+  --color-success-500: oklch(53% 0.19 155);
+  --color-success-600: oklch(45% 0.18 155);
+  --color-success-700: oklch(37% 0.15 155);
+
+  /* ===== 警告色：暖琥珀 ===== */
+  --color-warning-50: oklch(97% 0.04 85);
+  --color-warning-100: oklch(93% 0.08 85);
+  --color-warning-200: oklch(86% 0.12 85);
+  --color-warning-300: oklch(77% 0.16 85);
+  --color-warning-400: oklch(68% 0.19 85);
+  --color-warning-500: oklch(60% 0.20 85);
+  --color-warning-600: oklch(52% 0.19 85);
+  --color-warning-700: oklch(43% 0.16 85);
+
+  /* ===== 危险色：柔和玫瑰红 ===== */
+  --color-danger-50: oklch(96% 0.03 15);
+  --color-danger-100: oklch(91% 0.06 15);
+  --color-danger-200: oklch(83% 0.10 15);
+  --color-danger-300: oklch(73% 0.15 15);
+  --color-danger-400: oklch(64% 0.18 15);
+  --color-danger-500: oklch(55% 0.20 15);
+  --color-danger-600: oklch(47% 0.19 15);
+  --color-danger-700: oklch(39% 0.16 15);
+
+  /* ===== 表面/中性色：暖灰 ===== */
+  --color-surface-50: oklch(98% 0.003 265);
+  --color-surface-100: oklch(95% 0.005 265);
+  --color-surface-200: oklch(91% 0.008 265);
+  --color-surface-300: oklch(85% 0.012 265);
+  --color-surface-400: oklch(72% 0.015 265);
+  --color-surface-500: oklch(60% 0.018 265);
+  --color-surface-600: oklch(48% 0.016 265);
+  --color-surface-700: oklch(36% 0.012 265);
+  --color-surface-800: oklch(24% 0.010 265);
+  --color-surface-900: oklch(16% 0.008 265);
+
+  /* ===== 字体 ===== */
+  --font-family-display: 'Noto Serif SC', 'Source Han Serif SC', 'STSong', Georgia, serif;
+  --font-family-body: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* ===== 圆角 ===== */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-card: 1rem;
+  --radius-button: 0.625rem;
+  --radius-input: 0.625rem;
+  --radius-full: 9999px;
+
+  /* ===== 阴影 ===== */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.10), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.03);
+  --shadow-card-hover: 0 8px 15px -3px rgb(0 0 0 / 0.08), 0 3px 6px -4px rgb(0 0 0 / 0.04);
+  --shadow-dropdown: 0 8px 20px -4px rgb(0 0 0 / 0.10), 0 2px 8px -2px rgb(0 0 0 / 0.06);
+
+  /* ===== 动画缓动 ===== */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== 基础样式 ===== */
+body {
+  font-family: var(--font-family-body);
+  @apply bg-surface-50 text-surface-900 antialiased;
+  scroll-behavior: smooth;
+}
+
+/* ===== 选中文本样式 ===== */
+::selection {
+  @apply bg-primary-200 text-primary-900;
+}
+
+/* ===== 滚动条美化 ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-surface-400;
+}
+
+/* Firefox 滚动条 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(85% 0.012 265) transparent;
+}
+
+/* ===== 字体工具类 ===== */
+@utility font-display {
+  font-family: var(--font-family-display);
+}
+@utility font-body {
+  font-family: var(--font-family-body);
+}
+@utility font-mono {
+  font-family: var(--font-family-mono);
+}
+
+/* ===== 页面过渡动画 ===== */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s var(--ease-out-expo),
+              transform 0.25s var(--ease-out-expo);
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* ===== 关键帧动画 ===== */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== 动画工具类 ===== */
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.5s var(--ease-out-expo) both;
+}
+@utility animate-fade-in {
+  animation: fade-in 0.4s var(--ease-out-expo) both;
+}
+@utility animate-scale-in {
+  animation: scale-in 0.3s var(--ease-out-back) both;
+}
+@utility animate-slide-in-right {
+  animation: slide-in-right 0.3s var(--ease-out-expo) both;
+}
+@utility animate-shake {
+  animation: shake 0.5s var(--ease-in-out);
+}
+@utility animate-pulse-soft {
+  animation: pulse-soft 2s var(--ease-in-out) infinite;
+}
+
+/* ===== 交错动画延迟 ===== */
+@utility stagger-1 { animation-delay: 0.05s; }
+@utility stagger-2 { animation-delay: 0.10s; }
+@utility stagger-3 { animation-delay: 0.15s; }
+@utility stagger-4 { animation-delay: 0.20s; }
+@utility stagger-5 { animation-delay: 0.25s; }
+@utility stagger-6 { animation-delay: 0.30s; }
+@utility stagger-7 { animation-delay: 0.35s; }
+@utility stagger-8 { animation-delay: 0.40s; }
+@utility stagger-9 { animation-delay: 0.45s; }
+@utility stagger-10 { animation-delay: 0.50s; }
+
+/* ===== 骨架加载动画 ===== */
+@utility skeleton {
+  @apply bg-surface-200 rounded-md overflow-hidden relative;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      oklch(100% 0 0 / 0.4),
+      transparent
+    );
+    animation: shimmer 1.5s infinite;
+  }
+}
+
+/* ===== 语义工具类 ===== */
+@utility card {
+  @apply bg-white rounded-card border border-surface-200;
+}
+@utility card-hover {
+  @apply card transition-all duration-200;
+  &:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+}
+@utility focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:border-primary-400;
+}
+@utility input-field {
+  @apply w-full rounded-input border border-surface-300 bg-white px-3 py-2.5 text-sm text-surface-900
+         placeholder:text-surface-400
+         focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:border-primary-400
+         disabled:bg-surface-100 disabled:text-surface-400 disabled:cursor-not-allowed
+         transition-all duration-200;
+}
+/* ===== 管理后台内页过渡动画 ===== */
+.page-inner-enter-active,
+.page-inner-leave-active {
+  transition: opacity 0.2s var(--ease-out-expo);
+}
+.page-inner-enter-from,
+.page-inner-leave-to {
+  opacity: 0;
+}
+
+/* ===== 语义工具类 ===== */
+@utility page-heading {
+  @apply font-display text-2xl font-bold text-surface-900;
+}
+@utility section-heading {
+  @apply font-display text-lg font-semibold text-surface-800;
+}
